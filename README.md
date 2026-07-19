@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/header.svg" alt="QEbellavita — neural workflows, closed-loop prediction, cross-modal fusion" width="100%">
+<img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/header.svg" alt="QEbellavita — neural workflows, closed-loop prediction, cross-modal fusion" width="100%">
 
 <br>
 
@@ -8,7 +8,7 @@
 
 </div>
 
-<div align="center"><img src="./assets/divider.svg" alt="" width="100%"></div>
+<div align="center"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/divider.svg" alt="" width="100%"></div>
 
 ## What I'm building
 
@@ -40,19 +40,19 @@ The camera work is the part I can publish. Two repos below, and the short versio
 rPPG can be trusted less often than the field's headline numbers suggest — and
 considerably less often on darker skin.
 
-<div align="center"><img src="./assets/divider.svg" alt="" width="100%"></div>
+<div align="center"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/divider.svg" alt="" width="100%"></div>
 
 ## Public work
 
 <div align="center">
 
-<img src="./assets/pipeline.svg" alt="Pipeline diagram. Face ROI video feeds POS, CHROM and GREEN/ICA extraction; these feed an SNR and cross-method agreement stage, which feeds a confidence gate. The gate outputs either a heart rate or an abstention. Separately, 1000 Hz ECG feeds R-peak detection, which with POS output feeds scoring against ground truth." width="100%">
+<img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/pipeline.svg" alt="Pipeline diagram. Face ROI video feeds POS, CHROM and GREEN/ICA extraction; these feed an SNR and cross-method agreement stage, which feeds a confidence gate. The gate outputs either a heart rate or an abstention. Separately, 1000 Hz ECG feeds R-peak detection, which with POS output feeds scoring against ground truth." width="100%">
 
 </div>
 
 <div align="center">
-  <a href="https://github.com/QEbellavita/rppg10-extractor"><img src="./assets/repo-card-extractor.svg" alt="rppg10-extractor — camera heart-rate extraction scored against synchronized 1000 Hz ECG ground truth. Python, MIT, 70 tests." width="46%"></a>
-  <a href="https://github.com/QEbellavita/rppg-skin-tone-equity"><img src="./assets/repo-card-equity.svg" alt="rppg-skin-tone-equity — Fitzpatrick-stratified error for cross-dataset deep rPPG, caveats stated up front. Python, MIT, research." width="46%"></a>
+  <a href="https://github.com/QEbellavita/rppg10-extractor"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/repo-card-extractor.svg" alt="rppg10-extractor — camera heart-rate extraction scored against synchronized 1000 Hz ECG ground truth. Python, MIT, 70 tests." width="46%"></a>
+  <a href="https://github.com/QEbellavita/rppg-skin-tone-equity"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/repo-card-equity.svg" alt="rppg-skin-tone-equity — Fitzpatrick-stratified error for cross-dataset deep rPPG, caveats stated up front. Python, MIT, research." width="46%"></a>
 </div>
 
 **[rppg10-extractor](https://github.com/QEbellavita/rppg10-extractor)** — camera-based HR
@@ -61,7 +61,7 @@ doc opens by correcting an earlier claim the project itself got wrong.
 
 <div align="center">
 
-<img src="./assets/abstention-chart.svg" alt="Horizontal bar chart. Camera heart-rate error falls from 11.44 bpm across all three regions of interest, to 8.59 using the forehead only, to 5.87 once a confidence gate is applied — while coverage falls from 78 clips to 26 to 13." width="100%">
+<img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/abstention-chart.svg" alt="Horizontal bar chart. Camera heart-rate error falls from 11.44 bpm across all three regions of interest, to 8.59 using the forehead only, to 5.87 once a confidence gate is applied — while coverage falls from 78 clips to 26 to 13." width="100%">
 
 </div>
 
@@ -72,14 +72,14 @@ front, because the caveats are the finding as much as the numbers are.
 
 <div align="center">
 
-<img src="./assets/equity-chart.svg" alt="Grouped bar chart of camera heart-rate mean absolute error by source model and Fitzpatrick skin-tone group. PURE 17.29 light vs 21.68 dark; UBFC 10.63 vs 23.44; SCAMPS 24.65 vs 43.95. Darker skin is worse in every case." width="100%">
+<img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/equity-chart.svg" alt="Grouped bar chart of camera heart-rate mean absolute error by source model and Fitzpatrick skin-tone group. PURE 17.29 light vs 21.68 dark; UBFC 10.63 vs 23.44; SCAMPS 24.65 vs 43.95. Darker skin is worse in every case." width="100%">
 
 </div>
 
 Most of my work is in private repos — Quantara, belcrm, and client systems. What's public
 is the research I can share without redistributing gated corpora or anyone's data.
 
-<div align="center"><img src="./assets/divider.svg" alt="" width="100%"></div>
+<div align="center"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/divider.svg" alt="" width="100%"></div>
 
 ## Stack
 
@@ -97,7 +97,7 @@ is the research I can share without redistributing gated corpora or anyone's dat
   <p><img src="https://skillicons.dev/icons?i=railway,docker,githubactions,git&theme=dark" alt="Railway, Docker, GitHub Actions, Git"></p>
 </div>
 
-<div align="center"><img src="./assets/divider.svg" alt="" width="100%"></div>
+<div align="center"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/divider.svg" alt="" width="100%"></div>
 
 <!--
   Contribution snake removed from display for now. .github/workflows/snake.yml
