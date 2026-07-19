@@ -76,6 +76,12 @@ front, because the caveats are the finding as much as the numbers are.
 
 </div>
 
+**[eeg-affect-honest-negatives](https://github.com/QEbellavita/eeg-affect-honest-negatives)** —
+six pre-registered spikes asking whether EEG predicts self-reported affect for a person the
+model has never seen. It doesn't, and the ceiling holds at N=123. The reason published numbers
+look better: they decode *which clip you watched*, which is a different task. The harness
+reproduces that result first, to prove a null isn't just a broken pipeline.
+
 ### Tools
 
 **[obsidian-vault-mcp](https://github.com/QEbellavita/obsidian-vault-mcp)** — an MCP server
