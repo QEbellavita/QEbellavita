@@ -25,11 +25,27 @@ you actually feel out.
 - Designed to **abstain under low confidence**. A confident wrong number is worse than no
   number, and on this kind of signal the wrong number is easy to produce.
 
-**belcrm** — a white-label CRM, customisable to any business. Multi-tenant from the schema
-up, with tenant isolation enforced in tests rather than assumed: ticketing and case
-management, SLA tracking with breach prediction, agent performance and CSAT/CES surveys,
-inventory and delivery operations, and an AI layer that drafts replies and deflects repeat
-contacts. Node/Express + SQLite/Turso, deployed on Railway.
+**belcrm** — a white-label CRM, customisable to any business. Ticketing, case management,
+CSAT/CES, inventory and delivery ops — but the parts that aren't standard CRM:
+
+- **SLA-breach risk is a trained model, not a rule.** A logistic regression fit in-process
+  from each tenant's own resolved tickets, on six leakage-free creation-time features. It
+  only serves if it clears **AUC ≥ 0.68 and beats the majority-class baseline** on a
+  held-out split; otherwise it stays in shadow mode and the heuristic answers. Shadow
+  predictions are logged and later scored for AUC, Brier and per-band calibration against
+  real outcomes.
+- **An autonomous ticket agent inside a risk-tiered sandbox** — every tool is *auto*,
+  *needs-human-approval*, or *refuse-always*, and every action writes its audit row
+  **before** it executes. It learns per tenant, retrieving that tenant's own past approved
+  *and rejected* decisions as embedding-ranked few-shot examples.
+- **Knowledge-base auto-linking** over Gemini embeddings with a keyword-overlap fallback,
+  relevance floors tuned against a live production sweep rather than guessed — and
+  deflection measured, not assumed.
+- **Tenant isolation is proven in CI, not asserted in a doc.** An 811-line suite boots the
+  real router under real auth and checks one tenant cannot reach another's rows, next to a
+  boot smoke that starts the server against a deliberately stale schema. Underneath, a
+  libSQL/Turso drop-in for the node-sqlite3 API runs identical code against edge-replicated
+  remote, local file, and in-memory test databases.
 
 **Signal research** — I work across EEG, GSR, audio and text affect on the standard corpora
 (DEAP, WESAD, DREAMER, AMIGOS, FACED), and I publish the results that didn't work as
