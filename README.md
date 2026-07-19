@@ -29,16 +29,18 @@ you actually feel out.
 routing, SLA tracking, and an AI layer over customer service and distribution operations.
 Node/Express + SQLite, deployed on Railway.
 
-**Signal research** — beyond what ships, I work across EEG, GSR, audio and text affect on
-the standard corpora (DEAP, WESAD, DREAMER, AMIGOS). That work includes negative results
-I've kept rather than buried: subject-independent EEG affect sits at the chance ceiling
-once the splits are honest, and several published-looking spikes turned out to be leakage.
-Knowing which signals *don't* carry the information is what makes the ones that do worth
-trusting.
+**Signal research** — I work across EEG, GSR, audio and text affect on the standard corpora
+(DEAP, WESAD, DREAMER, AMIGOS, FACED), and I publish the results that didn't work as
+plainly as the ones that did.
 
-The camera work is the part I can publish. Two repos below, and the short version is that
-rPPG can be trusted less often than the field's headline numbers suggest — and
-considerably less often on darker skin.
+Six pre-registered spikes found that subject-independent EEG affect sits at the **chance
+ceiling** once the splits are honest — including at N=123. Several promising-looking
+results turned out to be leakage. That's a repo, not a footnote: knowing which signals
+*don't* carry the information is what makes the ones that do worth trusting.
+
+The camera work says something similar in a different register — rPPG can be trusted less
+often than the field's headline numbers suggest, and considerably less often on darker
+skin.
 
 <div align="center"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/divider.svg" alt="" width="100%"></div>
 
@@ -51,8 +53,13 @@ considerably less often on darker skin.
 </div>
 
 <div align="center">
-  <a href="https://github.com/QEbellavita/rppg10-eval-harness"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/repo-card-extractor.svg" alt="rppg10-eval-harness — camera heart-rate extraction scored against synchronized 1000 Hz ECG ground truth. Python, Apache-2.0, 50 tests." width="46%"></a>
-  <a href="https://github.com/QEbellavita/rppg-skin-tone-equity"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/repo-card-equity.svg" alt="rppg-skin-tone-equity — Fitzpatrick-stratified error for cross-dataset deep rPPG, caveats stated up front. Python, MIT, research." width="46%"></a>
+  <a href="https://github.com/QEbellavita/eeg-affect-honest-negatives"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/repo-card-eeg.svg" alt="eeg-affect-honest-negatives — six pre-registered spikes finding EEG affect sits at the chance ceiling, including at N=123. Python, MIT." width="47%"></a>
+  <a href="https://github.com/QEbellavita/system-brain-mcp"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/repo-card-brain.svg" alt="system-brain-mcp — read-only MCP tools for where code deploys, what is fabricated, whether the feedback loop closes. JavaScript, MIT, 8 tools and 51 tests." width="47%"></a>
+  <a href="https://github.com/QEbellavita/claude-honest-engineering-skills"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/repo-card-skills.svg" alt="claude-honest-engineering-skills — nine skills that make a coding agent check its work. Markdown, MIT." width="47%"></a>
+  <a href="https://github.com/QEbellavita/rppg10-eval-harness"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/repo-card-harness.svg" alt="rppg10-eval-harness — camera heart-rate extraction scored against synchronized ECG. Python, Apache-2.0, 14 test modules." width="47%"></a>
+  <a href="https://github.com/QEbellavita/rppg-skin-tone-equity"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/repo-card-equity.svg" alt="rppg-skin-tone-equity — Fitzpatrick-stratified error for cross-dataset deep rPPG. Python, MIT." width="47%"></a>
+  <a href="https://github.com/QEbellavita/hf-papers-mcp"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/repo-card-hfpapers.svg" alt="hf-papers-mcp — MCP server for Hugging Face Papers. Python, MIT, 6 tools and 11 tests." width="47%"></a>
+  <a href="https://github.com/QEbellavita/obsidian-vault-mcp"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/repo-card-obsidian.svg" alt="obsidian-vault-mcp — Obsidian MCP that survives iCloud eviction. JavaScript, MIT, 5 tools and 15 tests." width="47%"></a>
 </div>
 
 **[rppg10-eval-harness](https://github.com/QEbellavita/rppg10-eval-harness)** — camera-based
