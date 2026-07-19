@@ -45,6 +45,12 @@ considerably less often on darker skin.
 ## Public work
 
 <div align="center">
+
+<img src="./assets/pipeline.svg" alt="Pipeline diagram. Face ROI video feeds POS, CHROM and GREEN/ICA extraction; these feed an SNR and cross-method agreement stage, which feeds a confidence gate. The gate outputs either a heart rate or an abstention. Separately, 1000 Hz ECG feeds R-peak detection, which with POS output feeds scoring against ground truth." width="100%">
+
+</div>
+
+<div align="center">
   <a href="https://github.com/QEbellavita/rppg10-extractor"><img src="./assets/repo-card-extractor.svg" alt="rppg10-extractor — camera heart-rate extraction scored against synchronized 1000 Hz ECG ground truth. Python, MIT, 70 tests." width="46%"></a>
   <a href="https://github.com/QEbellavita/rppg-skin-tone-equity"><img src="./assets/repo-card-equity.svg" alt="rppg-skin-tone-equity — Fitzpatrick-stratified error for cross-dataset deep rPPG, caveats stated up front. Python, MIT, research." width="46%"></a>
 </div>
