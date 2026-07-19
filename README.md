@@ -45,8 +45,8 @@ considerably less often on darker skin.
 ## Public work
 
 <div align="center">
-  <a href="https://github.com/QEbellavita/rppg10-extractor"><img src="https://github-readme-stats.vercel.app/api/pin/?username=QEbellavita&repo=rppg10-extractor&theme=react&bg_color=0D1117&title_color=2563EB&icon_color=0D9488&border_color=1F2937&hide_border=false" alt="rppg10-extractor"></a>
-  <a href="https://github.com/QEbellavita/rppg-skin-tone-equity"><img src="https://github-readme-stats.vercel.app/api/pin/?username=QEbellavita&repo=rppg-skin-tone-equity&theme=react&bg_color=0D1117&title_color=2563EB&icon_color=0D9488&border_color=1F2937&hide_border=false" alt="rppg-skin-tone-equity"></a>
+  <a href="https://github.com/QEbellavita/rppg10-extractor"><img src="./assets/repo-card-extractor.svg" alt="rppg10-extractor — camera heart-rate extraction scored against synchronized 1000 Hz ECG ground truth. Python, MIT, 70 tests." width="46%"></a>
+  <a href="https://github.com/QEbellavita/rppg-skin-tone-equity"><img src="./assets/repo-card-equity.svg" alt="rppg-skin-tone-equity — Fitzpatrick-stratified error for cross-dataset deep rPPG, caveats stated up front. Python, MIT, research." width="46%"></a>
 </div>
 
 **[rppg10-extractor](https://github.com/QEbellavita/rppg10-extractor)** — camera-based HR
@@ -93,11 +93,14 @@ is the research I can share without redistributing gated corpora or anyone's dat
 
 <div align="center"><img src="./assets/divider.svg" alt="" width="100%"></div>
 
-<div align="center">
-
-<img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/output/snake.svg" alt="Contribution graph" width="100%">
-
-</div>
+<!--
+  Contribution snake removed from display for now. .github/workflows/snake.yml
+  is still present but fails with "Resource limits for this query exceeded" —
+  the default GITHUB_TOKEN cannot pull contribution data. Fixing it means
+  minting a PAT with read:user and storing it as a repo secret. Re-add this
+  once that is decided:
+  <img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/output/snake.svg" alt="Contribution graph" width="100%">
+-->
 
 <!--
   Contact badges go here — waiting on a real address/URL. Do not re-add
