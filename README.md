@@ -43,9 +43,14 @@ suggest, and considerably less often on darker skin.
 </div>
 
 **[rppg10-extractor](https://github.com/QEbellavita/rppg10-extractor)** — camera-based HR
-extraction over Dataset_rPPG-10, scored against synchronized 1000 Hz ECG. 11.44 bpm MAE
-overall; 5.87 under a confidence gate that declines to answer on half the clips. The
-validation doc opens by correcting an earlier claim the project itself got wrong.
+extraction over Dataset_rPPG-10, scored against synchronized 1000 Hz ECG. The validation
+doc opens by correcting an earlier claim the project itself got wrong.
+
+<div align="center">
+
+<img src="./assets/abstention-chart.svg" alt="Horizontal bar chart. Camera heart-rate error falls from 11.44 bpm across all three regions of interest, to 8.59 using the forehead only, to 5.87 once a confidence gate is applied — while coverage falls from 78 clips to 26 to 13." width="100%">
+
+</div>
 
 **[rppg-skin-tone-equity](https://github.com/QEbellavita/rppg-skin-tone-equity)** —
 Fitzpatrick-stratified error for cross-dataset deep rPPG. Dark skin is worse on every
