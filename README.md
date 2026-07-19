@@ -25,9 +25,11 @@ you actually feel out.
 - Designed to **abstain under low confidence**. A confident wrong number is worse than no
   number, and on this kind of signal the wrong number is easy to produce.
 
-**belcrm** — an enterprise CRM for magazine distribution: ticketing, case management,
-routing, SLA tracking, and an AI layer over customer service and distribution operations.
-Node/Express + SQLite, deployed on Railway.
+**belcrm** — a white-label CRM, customisable to any business. Multi-tenant from the schema
+up, with tenant isolation enforced in tests rather than assumed: ticketing and case
+management, SLA tracking with breach prediction, agent performance and CSAT/CES surveys,
+inventory and delivery operations, and an AI layer that drafts replies and deflects repeat
+contacts. Node/Express + SQLite/Turso, deployed on Railway.
 
 **Signal research** — I work across EEG, GSR, audio and text affect on the standard corpora
 (DEAP, WESAD, DREAMER, AMIGOS, FACED), and I publish the results that didn't work as
