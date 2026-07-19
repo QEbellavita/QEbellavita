@@ -8,7 +8,7 @@
 
 </div>
 
----
+<div align="center"><img src="./assets/divider.svg" alt="" width="100%"></div>
 
 ## What I'm building
 
@@ -33,15 +33,13 @@ Node/Express + SQLite, deployed on Railway.
 trusted. Two repos below. Short version: less often than the field's headline numbers
 suggest, and considerably less often on darker skin.
 
----
+<div align="center"><img src="./assets/divider.svg" alt="" width="100%"></div>
 
 ## Public work
 
 <div align="center">
-
-[![rppg10-extractor](https://github-readme-stats.vercel.app/api/pin/?username=QEbellavita&repo=rppg10-extractor&theme=react&bg_color=0D1117&title_color=2563EB&icon_color=0D9488&border_color=1F2937&hide_border=false)](https://github.com/QEbellavita/rppg10-extractor)
-[![rppg-skin-tone-equity](https://github-readme-stats.vercel.app/api/pin/?username=QEbellavita&repo=rppg-skin-tone-equity&theme=react&bg_color=0D1117&title_color=2563EB&icon_color=0D9488&border_color=1F2937&hide_border=false)](https://github.com/QEbellavita/rppg-skin-tone-equity)
-
+  <a href="https://github.com/QEbellavita/rppg10-extractor"><img src="https://github-readme-stats.vercel.app/api/pin/?username=QEbellavita&repo=rppg10-extractor&theme=react&bg_color=0D1117&title_color=2563EB&icon_color=0D9488&border_color=1F2937&hide_border=false" alt="rppg10-extractor"></a>
+  <a href="https://github.com/QEbellavita/rppg-skin-tone-equity"><img src="https://github-readme-stats.vercel.app/api/pin/?username=QEbellavita&repo=rppg-skin-tone-equity&theme=react&bg_color=0D1117&title_color=2563EB&icon_color=0D9488&border_color=1F2937&hide_border=false" alt="rppg-skin-tone-equity"></a>
 </div>
 
 **[rppg10-extractor](https://github.com/QEbellavita/rppg10-extractor)** — camera-based HR
@@ -51,38 +49,37 @@ validation doc opens by correcting an earlier claim the project itself got wrong
 
 **[rppg-skin-tone-equity](https://github.com/QEbellavita/rppg-skin-tone-equity)** —
 Fitzpatrick-stratified error for cross-dataset deep rPPG. Dark skin is worse on every
-metric from every source model, with MAE gaps of +4.4 / +12.8 / +19.3 bpm. Measured on a
-weak baseline at rest with n=12 — stated up front, because the caveats are the finding as
-much as the numbers are.
+metric from every source model. Measured on a weak baseline at rest with n=12 — stated up
+front, because the caveats are the finding as much as the numbers are.
+
+<div align="center">
+
+<img src="./assets/equity-chart.svg" alt="Grouped bar chart of camera heart-rate mean absolute error by source model and Fitzpatrick skin-tone group. PURE 17.29 light vs 21.68 dark; UBFC 10.63 vs 23.44; SCAMPS 24.65 vs 43.95. Darker skin is worse in every case." width="100%">
+
+</div>
 
 Most of my work is in private repos — Quantara, belcrm, and client systems. What's public
 is the research I can share without redistributing gated corpora or anyone's data.
 
----
+<div align="center"><img src="./assets/divider.svg" alt="" width="100%"></div>
 
 ## Stack
 
 <div align="center">
+  <p><strong>Languages &amp; ML</strong></p>
+  <p><img src="https://skillicons.dev/icons?i=python,ts,js,swift,pytorch,tensorflow,sklearn&theme=dark" alt="Python, TypeScript, JavaScript, Swift, PyTorch, TensorFlow, scikit-learn"></p>
 
-**Languages & ML**
+  <p><strong>Backend &amp; Data</strong></p>
+  <p><img src="https://skillicons.dev/icons?i=nodejs,express,fastapi,postgres,sqlite,supabase&theme=dark" alt="Node.js, Express, FastAPI, PostgreSQL, SQLite, Supabase"></p>
 
-<img src="https://skillicons.dev/icons?i=python,ts,js,swift,pytorch,tensorflow,sklearn&theme=dark" alt="Python, TypeScript, JavaScript, Swift, PyTorch, TensorFlow, scikit-learn">
+  <p><strong>Mobile &amp; Frontend</strong></p>
+  <p><img src="https://skillicons.dev/icons?i=react,expo,threejs,tailwind,vite&theme=dark" alt="React, React Native, Expo, Three.js, Tailwind, Vite"></p>
 
-**Backend & Data**
-
-<img src="https://skillicons.dev/icons?i=nodejs,express,fastapi,postgres,sqlite,supabase,redis&theme=dark" alt="Node.js, Express, FastAPI, PostgreSQL, SQLite, Supabase, Redis">
-
-**Mobile & Frontend**
-
-<img src="https://skillicons.dev/icons?i=react,threejs,tailwind,vite&theme=dark" alt="React, React Native, Three.js, Tailwind, Vite">
-
-**Infra**
-
-<img src="https://skillicons.dev/icons?i=docker,githubactions,vercel,cloudflare,git&theme=dark" alt="Docker, GitHub Actions, Vercel, Cloudflare, Git">
-
+  <p><strong>Infra</strong></p>
+  <p><img src="https://skillicons.dev/icons?i=railway,docker,githubactions,git&theme=dark" alt="Railway, Docker, GitHub Actions, Git"></p>
 </div>
 
----
+<div align="center"><img src="./assets/divider.svg" alt="" width="100%"></div>
 
 <div align="center">
 
