@@ -25,23 +25,56 @@ you actually feel out.
 - Designed to **abstain under low confidence**. A confident wrong number is worse than no
   number, and on this kind of signal the wrong number is easy to produce.
 
-**Scale.** ~450 API endpoints over 233 tables, 839 test suites, backed by a six-service
-production deployment — Node API, sklearn model server, a 246-feature valence/arousal
-service, speech emotion over wav2vec2, a medical inference surface, and Postgres. The iOS
-client ships through TestFlight; the watchOS companion runs **CoreML inference on-device**,
-with battery-aware model unloading and cloud fallback.
+**Scale.** ~450 REST endpoints (328 documented in OpenAPI) over a 234-table schema, and
+1,127 backend test suites across ~8,300 cases. Six services in production on Railway — Node
+API, a sklearn model server, a 246-feature valence/arousal service, speech emotion over
+wav2vec2, a medical inference surface, and Postgres — with Socket.io real-time across 21
+namespaces. The iOS client ships through TestFlight; the watchOS companion runs **CoreML
+inference on-device** against compiled `.mlmodelc` weights, falling back to cloud when the
+local model declines.
 
-**The models report their own baselines.** Subject-independent, held out by subject:
+**The models report their own baselines.** Held out by subject, because a random split on
+32 subjects × 40 trials puts the same person on both sides and inflates everything:
 
 | Task | Corpus | Result | Baseline |
 |---|---|---|---|
-| Stress | WESAD | 87.7% accuracy | 78.0% majority |
+| Stress (binary, holdout gate) | WESAD | 87.7% accuracy | 78.0% majority |
+| Stress (binary, GroupKFold-5) | WESAD | 92.5% ± 4.3 / 0.870 macro-F1 | Schmidt 2018 ≈93% |
+| Stress (3-class) | WESAD | 77.7% / 0.659 macro-F1 | GroupKFold by subject |
 | Sleep staging (5-class) | Sleep-EDF | 0.738 macro-F1 | 40,145 held-out epochs |
 | Cognitive workload | STEW | 0.794 macro-F1 | GroupKFold by subject |
-| Activity | WISDM | 0.752 macro-F1 | Subject-independent |
+| Activity | WISDM | 0.752 macro-F1 | *retired 97.9% — leaky split* |
 
-That baseline column is the point. 87.7% sounds strong until you know the majority class is
-78.0% — so the honest delta is what gets recorded, in the artifact, next to the metric.
+That baseline column is the point, and so is the last row. 87.7% sounds strong until you
+know the majority class is 78.0%. And 97.9% activity recognition looked excellent until the
+split was audited — the honest subject-independent number is 77.8%, so the old model was
+**quarantined with its inflated score recorded next to it**. A cognitive-workload model
+reporting 25.3% on four classes — chance — was retired the same way. The stress model's own
+holdout note records that it misses over half of stress windows at 0.459 recall; that sits
+in the artifact too.
+
+**The ML layer.** ONNX inference in-process under a bounded-concurrency loader with session
+tracking and degraded-health reporting. A weighted ensemble where roughly nine models
+actually vote, with a staged shadow tier behind them carrying zero weight until promoted —
+and promotion is manual, for the reason below. 28-label text emotion from a quantized
+RoBERTa GoEmotions ONNX model, running in Node with a hand-written byte-level BPE tokenizer
+because the native `tokenizers` addon isn't available in the container. Speech emotion over
+wav2vec2 on a Python sidecar. Camera-derived heart rate from POS with a confidence gate that
+abstains.
+
+**The AI layer.** A Groq-backed LLM gateway (Llama 3.1 8B / 3.3 70B) with per-provider
+circuit breakers, per-user daily token budgets, concurrency caps, JSON-repair retry when
+structured output comes back malformed, and local Ollama as fallback. Every user-facing
+coach message then passes a **hard honesty gate**: it extracts numeric tokens from the
+model's output and rejects any figure not derivable from the underlying signal. A gate
+failure falls back to a deterministic template — the same prompt is never shopped to a
+second model hoping for a passing answer. Crisis detection sits below all of it and emits a
+hardcoded message with real resources, deliberately not LLM-generated.
+
+The platform also exposes itself as an **MCP server** — 72 tools across 18 domains over both
+stdio and authenticated Streamable HTTP, fail-closed so it won't mount at all if the secret
+is missing. One of those tools is a fabrication audit that scans the codebase for its own
+placeholder cores.
 
 **Three things I built because the alternative was lying to a user:**
 
