@@ -53,7 +53,7 @@ skin.
 </div>
 
 <div align="center">
-  <a href="https://github.com/QEbellavita/eeg-affect-honest-negatives"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/repo-card-eeg.svg" alt="eeg-affect-honest-negatives — six pre-registered spikes finding EEG affect sits at the chance ceiling, including at N=123. Python, MIT." width="47%"></a>
+  <a href="https://github.com/QEbellavita/eeg-affect-honest-negatives"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/repo-card-eeg.svg" alt="eeg-affect-honest-negatives — pre-registered spikes finding EEG affect sits at the chance ceiling, including at N=123. Python, MIT, 3 datasets." width="47%"></a>
   <a href="https://github.com/QEbellavita/system-brain-mcp"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/repo-card-brain.svg" alt="system-brain-mcp — read-only MCP tools for where code deploys, what is fabricated, whether the feedback loop closes. JavaScript, MIT, 8 tools and 51 tests." width="47%"></a>
   <a href="https://github.com/QEbellavita/claude-honest-engineering-skills"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/repo-card-skills.svg" alt="claude-honest-engineering-skills — nine skills that make a coding agent check its work. Markdown, MIT." width="47%"></a>
   <a href="https://github.com/QEbellavita/rppg10-eval-harness"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/repo-card-harness.svg" alt="rppg10-eval-harness — camera heart-rate extraction scored against synchronized ECG. Python, Apache-2.0, 14 test modules." width="47%"></a>
@@ -84,7 +84,7 @@ front, because the caveats are the finding as much as the numbers are.
 </div>
 
 **[eeg-affect-honest-negatives](https://github.com/QEbellavita/eeg-affect-honest-negatives)** —
-six pre-registered spikes asking whether EEG predicts self-reported affect for a person the
+pre-registered spikes asking whether EEG predicts self-reported affect for a person the
 model has never seen. It doesn't, and the ceiling holds at N=123. The reason published numbers
 look better: they decode *which clip you watched*, which is a different task. The harness
 reproduces that result first, to prove a null isn't just a broken pipeline.
