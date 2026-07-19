@@ -145,6 +145,13 @@ reproduces that result first, to prove a null isn't just a broken pipeline.
 
 ### Tools
 
+**[system-brain-mcp](https://github.com/QEbellavita/system-brain-mcp)** — eight read-only
+MCP tools that let a coding agent interrogate the system it's working in: where this code
+*actually* deploys, what in it is fabricated, what's still open, whether the learning loop
+closes. The deploy tool doesn't just read the config file — it cross-checks the declared
+target against every platform config in the repo and reports the strays, because a leftover
+project on another platform is the usual cause of "production keeps reverting".
+
 **[obsidian-vault-mcp](https://github.com/QEbellavita/obsidian-vault-mcp)** — an MCP server
 for Obsidian vaults that survives iCloud eviction. The naive version hangs forever on
 dataless files; `stat`'s block count is the only reliable signal that a note is really
