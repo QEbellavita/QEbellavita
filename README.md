@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/header.svg" alt="QEbellavita — neural workflows, closed-loop prediction, cross-modal fusion" width="100%">
+<img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/header.svg?v=2" alt="QEbellavita — neural workflows, closed-loop prediction, cross-modal fusion" width="100%">
 
 <br>
 
@@ -8,7 +8,7 @@
 
 </div>
 
-<div align="center"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/divider.svg" alt="" width="100%"></div>
+<div align="center"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/divider.svg?v=2" alt="" width="100%"></div>
 
 ## What I'm building
 
@@ -24,6 +24,42 @@ you actually feel out.
   population mean. Ships on iOS, watchOS and the web.
 - Designed to **abstain under low confidence**. A confident wrong number is worse than no
   number, and on this kind of signal the wrong number is easy to produce.
+
+**Scale.** ~450 API endpoints over 233 tables, 839 test suites, backed by a six-service
+production deployment — Node API, sklearn model server, a 246-feature valence/arousal
+service, speech emotion over wav2vec2, a medical inference surface, and Postgres. The iOS
+client ships through TestFlight; the watchOS companion runs **CoreML inference on-device**,
+with battery-aware model unloading and cloud fallback.
+
+**The models report their own baselines.** Subject-independent, held out by subject:
+
+| Task | Corpus | Result | Baseline |
+|---|---|---|---|
+| Stress | WESAD | 87.7% accuracy | 78.0% majority |
+| Sleep staging (5-class) | Sleep-EDF | 0.738 macro-F1 | 40,145 held-out epochs |
+| Cognitive workload | STEW | 0.794 macro-F1 | GroupKFold by subject |
+| Activity | WISDM | 0.752 macro-F1 | Subject-independent |
+
+That baseline column is the point. 87.7% sounds strong until you know the majority class is
+78.0% — so the honest delta is what gets recorded, in the artifact, next to the metric.
+
+**Three things I built because the alternative was lying to a user:**
+
+- **A promotion gate that refuses to promote.** Forecast engines cannot self-promote. The
+  endpoint returns a fail-closed, decision-only verdict needing ≥300 *paired* targets and a
+  ≥5% composite-MAE win — and no automatic flip mechanism exists. Promotion is deliberate
+  manual work, by design.
+- **A feedback loop fail-closed to an allowlist**, so a model can't train on its own
+  output. An earlier weak-labeller prompted an LLM with the model's own prediction and
+  recorded the echo as ground truth. That's pseudo-label poisoning; it was killed at source.
+- **Process-level ONNX crash isolation.** A native runtime abort is uncatchable in JS, and
+  worker threads don't help — a thread abort kills the process. So scoped inference runs in
+  a forked sidecar where the abort becomes an ordinary rejection and the engine falls back
+  to its heuristic, behind a sticky per-model circuit breaker.
+
+And a written inventory of the platform's own inert code: ~15 fully-built capabilities
+gated off, each with its effect-when-off and a safe-to-flip verdict. Knowing what *isn't*
+switched on is a feature.
 
 **belcrm** — a white-label CRM, customisable to any business. Ticketing, case management,
 CSAT/CES, inventory and delivery ops — but the parts that aren't standard CRM:
@@ -60,24 +96,24 @@ The camera work says something similar in a different register — rPPG can be t
 often than the field's headline numbers suggest, and considerably less often on darker
 skin.
 
-<div align="center"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/divider.svg" alt="" width="100%"></div>
+<div align="center"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/divider.svg?v=2" alt="" width="100%"></div>
 
 ## Public work
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/pipeline.svg" alt="Pipeline diagram. Face ROI video feeds POS, CHROM and GREEN/ICA extraction; these feed an SNR and cross-method agreement stage, which feeds a confidence gate. The gate outputs either a heart rate or an abstention. Separately, 1000 Hz ECG feeds R-peak detection, which with POS output feeds scoring against ground truth." width="100%">
+<img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/pipeline.svg?v=2" alt="Pipeline diagram. Face ROI video feeds POS, CHROM and GREEN/ICA extraction; these feed an SNR and cross-method agreement stage, which feeds a confidence gate. The gate outputs either a heart rate or an abstention. Separately, 1000 Hz ECG feeds R-peak detection, which with POS output feeds scoring against ground truth." width="100%">
 
 </div>
 
 <div align="center">
-  <a href="https://github.com/QEbellavita/eeg-affect-honest-negatives"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/repo-card-eeg.svg" alt="eeg-affect-honest-negatives — pre-registered spikes finding EEG affect sits at the chance ceiling, including at N=123. Python, MIT, 3 datasets." width="47%"></a>
-  <a href="https://github.com/QEbellavita/system-brain-mcp"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/repo-card-brain.svg" alt="system-brain-mcp — read-only MCP tools for where code deploys, what is fabricated, whether the feedback loop closes. JavaScript, MIT, 8 tools and 51 tests." width="47%"></a>
-  <a href="https://github.com/QEbellavita/claude-honest-engineering-skills"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/repo-card-skills.svg" alt="claude-honest-engineering-skills — nine skills that make a coding agent check its work. Markdown, MIT." width="47%"></a>
-  <a href="https://github.com/QEbellavita/rppg10-eval-harness"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/repo-card-harness.svg" alt="rppg10-eval-harness — camera heart-rate extraction scored against synchronized ECG. Python, Apache-2.0, 14 test modules." width="47%"></a>
-  <a href="https://github.com/QEbellavita/rppg-skin-tone-equity"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/repo-card-equity.svg" alt="rppg-skin-tone-equity — Fitzpatrick-stratified error for cross-dataset deep rPPG. Python, MIT." width="47%"></a>
-  <a href="https://github.com/QEbellavita/hf-papers-mcp"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/repo-card-hfpapers.svg" alt="hf-papers-mcp — MCP server for Hugging Face Papers. Python, MIT, 6 tools and 11 tests." width="47%"></a>
-  <a href="https://github.com/QEbellavita/obsidian-vault-mcp"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/repo-card-obsidian.svg" alt="obsidian-vault-mcp — Obsidian MCP that survives iCloud eviction. JavaScript, MIT, 5 tools and 15 tests." width="47%"></a>
+  <a href="https://github.com/QEbellavita/eeg-affect-honest-negatives"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/repo-card-eeg.svg?v=2" alt="eeg-affect-honest-negatives — pre-registered spikes finding EEG affect sits at the chance ceiling, including at N=123. Python, MIT, 3 datasets." width="47%"></a>
+  <a href="https://github.com/QEbellavita/system-brain-mcp"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/repo-card-brain.svg?v=2" alt="system-brain-mcp — read-only MCP tools for where code deploys, what is fabricated, whether the feedback loop closes. JavaScript, MIT, 8 tools and 51 tests." width="47%"></a>
+  <a href="https://github.com/QEbellavita/claude-honest-engineering-skills"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/repo-card-skills.svg?v=2" alt="claude-honest-engineering-skills — nine skills that make a coding agent check its work. Markdown, MIT." width="47%"></a>
+  <a href="https://github.com/QEbellavita/rppg10-eval-harness"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/repo-card-harness.svg?v=2" alt="rppg10-eval-harness — camera heart-rate extraction scored against synchronized ECG. Python, Apache-2.0, 14 test modules." width="47%"></a>
+  <a href="https://github.com/QEbellavita/rppg-skin-tone-equity"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/repo-card-equity.svg?v=2" alt="rppg-skin-tone-equity — Fitzpatrick-stratified error for cross-dataset deep rPPG. Python, MIT." width="47%"></a>
+  <a href="https://github.com/QEbellavita/hf-papers-mcp"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/repo-card-hfpapers.svg?v=2" alt="hf-papers-mcp — MCP server for Hugging Face Papers. Python, MIT, 6 tools and 11 tests." width="47%"></a>
+  <a href="https://github.com/QEbellavita/obsidian-vault-mcp"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/repo-card-obsidian.svg?v=2" alt="obsidian-vault-mcp — Obsidian MCP that survives iCloud eviction. JavaScript, MIT, 5 tools and 15 tests." width="47%"></a>
 </div>
 
 **[rppg10-eval-harness](https://github.com/QEbellavita/rppg10-eval-harness)** — camera-based
@@ -86,7 +122,7 @@ leads with the number that isn't good: 11.44 bpm overall is not a usable reading
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/abstention-chart.svg" alt="Horizontal bar chart. Camera heart-rate error falls from 11.44 bpm across all three regions of interest, to 8.59 using the forehead only, to 5.87 once a confidence gate is applied — while coverage falls from 78 clips to 26 to 13." width="100%">
+<img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/abstention-chart.svg?v=2" alt="Horizontal bar chart. Camera heart-rate error falls from 11.44 bpm across all three regions of interest, to 8.59 using the forehead only, to 5.87 once a confidence gate is applied — while coverage falls from 78 clips to 26 to 13." width="100%">
 
 </div>
 
@@ -97,7 +133,7 @@ front, because the caveats are the finding as much as the numbers are.
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/equity-chart.svg" alt="Grouped bar chart of camera heart-rate mean absolute error by source model and Fitzpatrick skin-tone group. PURE 17.29 light vs 21.68 dark; UBFC 10.63 vs 23.44; SCAMPS 24.65 vs 43.95. Darker skin is worse in every case." width="100%">
+<img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/equity-chart.svg?v=2" alt="Grouped bar chart of camera heart-rate mean absolute error by source model and Fitzpatrick skin-tone group. PURE 17.29 light vs 21.68 dark; UBFC 10.63 vs 23.44; SCAMPS 24.65 vs 43.95. Darker skin is worse in every case." width="100%">
 
 </div>
 
@@ -126,7 +162,7 @@ went wrong; one of them is for catching an "implemented" engine that turns out t
 Most of my work is in private repos — Quantara, belcrm, and client systems. What's public
 is the research I can share without redistributing gated corpora or anyone's data.
 
-<div align="center"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/divider.svg" alt="" width="100%"></div>
+<div align="center"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/divider.svg?v=2" alt="" width="100%"></div>
 
 ## Stack
 
@@ -144,5 +180,5 @@ is the research I can share without redistributing gated corpora or anyone's dat
   <p><img src="https://skillicons.dev/icons?i=railway,docker,githubactions,git&theme=dark" alt="Railway, Docker, GitHub Actions, Git"></p>
 </div>
 
-<div align="center"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/divider.svg" alt="" width="100%"></div>
+<div align="center"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/divider.svg?v=2" alt="" width="100%"></div>
 
