@@ -1,5 +1,3 @@
-### QEbellavita
-
 <div align="center">
 
 <img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/header.svg" alt="QEbellavita — neural workflows, closed-loop prediction, cross-modal fusion" width="100%">
