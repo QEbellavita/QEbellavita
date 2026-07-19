@@ -33,7 +33,7 @@ Node/Express + SQLite, deployed on Railway.
 (DEAP, WESAD, DREAMER, AMIGOS, FACED), and I publish the results that didn't work as
 plainly as the ones that did.
 
-Six pre-registered spikes found that subject-independent EEG affect sits at the **chance
+Pre-registered spikes found that subject-independent EEG affect sits at the **chance
 ceiling** once the splits are honest — including at N=123. Several promising-looking
 results turned out to be leakage. That's a repo, not a footnote: knowing which signals
 *don't* carry the information is what makes the ones that do worth trusting.
