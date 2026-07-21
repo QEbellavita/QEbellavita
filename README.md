@@ -33,25 +33,6 @@ namespaces. The iOS client ships through TestFlight; the watchOS companion runs 
 inference on-device** against compiled `.mlmodelc` weights, falling back to cloud when the
 local model declines.
 
-**The models report their own baselines.** Held out by subject, because a random split on
-32 subjects × 40 trials puts the same person on both sides and inflates everything:
-
-| Task | Corpus | Result | Baseline |
-|---|---|---|---|
-| Stress (binary, holdout gate) | WESAD | 87.7% accuracy | 78.0% majority |
-| Stress (binary, GroupKFold-5) | WESAD | 92.5% ± 4.3 / 0.870 macro-F1 | Schmidt 2018 ≈93% |
-| Stress (3-class) | WESAD | 77.7% / 0.659 macro-F1 | GroupKFold by subject |
-| Sleep staging (5-class) | Sleep-EDF | 0.738 macro-F1 | 40,145 held-out epochs |
-| Cognitive workload | STEW | 0.794 macro-F1 | GroupKFold by subject |
-| Activity | WISDM | 0.752 macro-F1 | *retired 97.9% — leaky split* |
-
-That baseline column is the point, and so is the last row. 87.7% sounds strong until you
-know the majority class is 78.0%. And 97.9% activity recognition looked excellent until the
-split was audited — the honest subject-independent number is 77.8%, so the old model was
-**quarantined with its inflated score recorded next to it**. A cognitive-workload model
-reporting 25.3% on four classes — chance — was retired the same way. The stress model's own
-holdout note records that it misses over half of stress windows at 0.459 recall; that sits
-in the artifact too.
 
 **The ML layer.** ONNX inference in-process under a bounded-concurrency loader with session
 tracking and degraded-health reporting. A weighted ensemble where roughly nine models
