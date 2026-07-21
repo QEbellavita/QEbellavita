@@ -114,6 +114,55 @@ CSAT/CES, inventory and delivery ops — but the parts that aren't standard CRM:
 
 <div align="center"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/divider.svg?v=2" alt="" width="100%"></div>
 
+## Quantara — in motion
+
+The visual identity the engineering above ships under: anatomically-grounded organs
+rendered in claymation warmth, wired with EKG neon. Landing-page motion studies, brand
+art and app-icon explorations for Quantara.
+
+<div align="center">
+
+<img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/media/landing-hero-art.png" alt="Quantara landing hero art — an anatomical brain and heart joined by glowing neural filaments over an EKG trace, on a deep violet dashboard frame" width="100%">
+
+<br><br>
+
+<a href="https://github.com/QEbellavita/QEbellavita/blob/main/assets/media/hero-loop.mp4"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/media/hero-loop.gif" alt="Hero loop — the landing page's animated brain-and-heart sequence" width="85%"></a>
+
+<br>
+
+<a href="https://github.com/QEbellavita/QEbellavita/blob/main/assets/media/app-landing.mp4"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/media/app-landing.gif" alt="App landing motion study" width="47%"></a>
+<a href="https://github.com/QEbellavita/QEbellavita/blob/main/assets/media/quantara-teaser.mp4"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/media/quantara-teaser.gif" alt="Quantara brand teaser" width="47%"></a>
+
+<br>
+
+<a href="https://github.com/QEbellavita/QEbellavita/blob/main/assets/media/opening-landing.mp4"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/media/opening-landing-poster.jpg" alt="Opening sequence — claymation brain wired into a mesh of threads and gears beside the Quantara app" width="47%"></a>
+<a href="https://github.com/QEbellavita/QEbellavita/blob/main/assets/media/landing-tour.mp4"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/media/landing-tour-poster.jpg" alt="Landing page tour" width="47%"></a>
+
+<sub>▶ &nbsp;click either still to play the full sequence</sub>
+
+<br><br>
+
+<img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/media/heart-neon.jpeg" alt="Neon anatomical heart on textured blue, EKG trace behind" width="31%">
+<img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/media/brain-clay.jpeg" alt="Claymation brain radiating threads and gears on pink and blue" width="31%">
+<img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/media/heart-neon-blue.jpeg" alt="Neon heart variant on deep blue" width="31%">
+
+<br>
+
+<img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/media/app-icon-triptych.jpeg" alt="Three Quantara app-icon explorations — retro device frame, pastel clay, neon" width="94%">
+
+<br>
+
+<img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/media/app-icon-clay.png" alt="Quantara icon — pastel clay heart in a retro biometric device frame" width="31%">
+<img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/media/heart-pastel.jpeg" alt="Pastel clay heart with sculpted EKG line" width="62%">
+
+<br><br>
+
+<img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/media/landing-page-design.png" alt="Full landing page design — Welcome to Quantara hero with 3D brain, phone mockup, feature row and Your mind. Your data. Your way. section" width="70%">
+
+</div>
+
+<div align="center"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/divider.svg?v=2" alt="" width="100%"></div>
+
 ## Public work
 
 <div align="center">
