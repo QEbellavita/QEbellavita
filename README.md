@@ -8,147 +8,22 @@
 
 </div>
 
-<div align="center"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/divider.svg?v=2" alt="" width="100%"></div>
-
-## What I'm building
-
-**Quantara** — emotional intelligence infrastructure. Biometric signals in, a read on how
-you actually feel out.
-
-- Cross-modal fusion running live in production — **cardiac, camera-derived HR, ambient
-  context and music signal**, blended against a per-user arousal baseline.
-- A six-phase Neural Workflow engine — ingest → detect → predict → feedback → report →
-  evolve — with the prediction layer wired to real outcome feedback rather than to its
-  own guesses.
-- Per-user baseline modulation, so the read is calibrated to *you* rather than to a
-  population mean. Ships on iOS, watchOS and the web.
-- Designed to **abstain under low confidence**. A confident wrong number is worse than no
-  number, and on this kind of signal the wrong number is easy to produce.
-
-**Scale.** ~450 REST endpoints (328 documented in OpenAPI) over a 234-table schema, and
-1,127 backend test suites across ~8,300 cases. Six services in production on Railway — Node
-API, a sklearn model server, a 246-feature valence/arousal service, speech emotion over
-wav2vec2, a medical inference surface, and Postgres — with Socket.io real-time across 21
-namespaces. The iOS client ships through TestFlight; the watchOS companion runs **CoreML
-inference on-device** against compiled `.mlmodelc` weights, falling back to cloud when the
-local model declines.
-
-
-**The ML layer.** ONNX inference in-process under a bounded-concurrency loader with session
-tracking and degraded-health reporting. A weighted ensemble where roughly nine models
-actually vote, with a staged shadow tier behind them carrying zero weight until promoted —
-and promotion is manual, for the reason below. 28-label text emotion from a quantized
-RoBERTa GoEmotions ONNX model, running in Node with a hand-written byte-level BPE tokenizer
-because the native `tokenizers` addon isn't available in the container. Speech emotion over
-wav2vec2 on a Python sidecar. Camera-derived heart rate from POS with a confidence gate that
-abstains.
-
-**The AI layer.** A Groq-backed LLM gateway (Llama 3.1 8B / 3.3 70B) with per-provider
-circuit breakers, per-user daily token budgets, concurrency caps, JSON-repair retry when
-structured output comes back malformed, and local Ollama as fallback. Every user-facing
-coach message then passes a **hard honesty gate**: it extracts numeric tokens from the
-model's output and rejects any figure not derivable from the underlying signal. A gate
-failure falls back to a deterministic template — the same prompt is never shopped to a
-second model hoping for a passing answer. Crisis detection sits below all of it and emits a
-hardcoded message with real resources, deliberately not LLM-generated.
-
-The platform also exposes itself as an **MCP server** — 72 tools across 18 domains over both
-stdio and authenticated Streamable HTTP, fail-closed so it won't mount at all if the secret
-is missing. One of those tools is a fabrication audit that scans the codebase for its own
-placeholder cores.
-
-**Signal research** — I work across EEG, GSR, audio and text affect on the standard corpora
-(DEAP, WESAD, DREAMER, AMIGOS, FACED), and I publish the results that didn't work as
-plainly as the ones that did.
-
-Pre-registered spikes found that subject-independent EEG affect sits at the **chance
-ceiling** once the splits are honest — including at N=123. Several promising-looking
-results turned out to be leakage. That's a repo, not a footnote: knowing which signals
-*don't* carry the information is what makes the ones that do worth trusting.
-
-The camera work says something similar in a different register — rPPG can be trusted less
-often than the field's headline numbers suggest, and considerably less often on darker
-skin.
-
-**Three things I built because the alternative was lying to a user:**
-
-- **A promotion gate that refuses to promote.** Forecast engines cannot self-promote. The
-  endpoint returns a fail-closed, decision-only verdict needing ≥300 *paired* targets and a
-  ≥5% composite-MAE win — and no automatic flip mechanism exists. Promotion is deliberate
-  manual work, by design.
-- **A feedback loop fail-closed to an allowlist**, so a model can't train on its own
-  output. An earlier weak-labeller prompted an LLM with the model's own prediction and
-  recorded the echo as ground truth. That's pseudo-label poisoning; it was killed at source.
-- **Process-level ONNX crash isolation.** A native runtime abort is uncatchable in JS, and
-  worker threads don't help — a thread abort kills the process. So scoped inference runs in
-  a forked sidecar where the abort becomes an ordinary rejection and the engine falls back
-  to its heuristic, behind a sticky per-model circuit breaker.
-
-And a written inventory of the platform's own inert code: ~15 fully-built capabilities
-gated off, each with its effect-when-off and a safe-to-flip verdict. Knowing what *isn't*
-switched on is a feature.
-
-**belcrm** — a white-label CRM, customisable to any business. Ticketing, case management,
-CSAT/CES, inventory and delivery ops — but the parts that aren't standard CRM:
-
-- **SLA-breach risk is a trained model, not a rule.** A logistic regression fit in-process
-  from each tenant's own resolved tickets, on six leakage-free creation-time features. It
-  only serves if it clears **AUC ≥ 0.68 and beats the majority-class baseline** on a
-  held-out split; otherwise it stays in shadow mode and the heuristic answers. Shadow
-  predictions are logged and later scored for AUC, Brier and per-band calibration against
-  real outcomes.
-- **An autonomous ticket agent inside a risk-tiered sandbox** — every tool is *auto*,
-  *needs-human-approval*, or *refuse-always*, and every action writes its audit row
-  **before** it executes. It learns per tenant, retrieving that tenant's own past approved
-  *and rejected* decisions as embedding-ranked few-shot examples.
-- **Knowledge-base auto-linking** over Gemini embeddings with a keyword-overlap fallback,
-  relevance floors tuned against a live production sweep rather than guessed — and
-  deflection measured, not assumed.
-- **Tenant isolation is proven in CI, not asserted in a doc.** An 811-line suite boots the
-  real router under real auth and checks one tenant cannot reach another's rows, next to a
-  boot smoke that starts the server against a deliberately stale schema. Underneath, a
-  libSQL/Turso drop-in for the node-sqlite3 API runs identical code against edge-replicated
-  remote, local file, and in-memory test databases.
-
-
-
-<div align="center"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/divider.svg?v=2" alt="" width="100%"></div>
-
-## Quantara — in motion
-
-The visual identity the platform ships under — anatomically-grounded organs rendered in
-claymation warmth, wired with EKG neon. Same premise as the engineering: the signal is a
-real body, so the imagery is a real body.
+I build emotional-intelligence infrastructure on real biometric signal — cardiac, camera,
+context — and I publish the results that didn't work as plainly as the ones that did. A
+lot of what follows is the second kind: gates that refuse to promote, models that abstain,
+and a pre-registered result that came back at the chance ceiling and stayed there.
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/media/landing-hero-art.png" alt="Quantara landing hero art — an anatomical brain and heart joined by glowing neural filaments over an EKG trace, on a deep violet field" width="100%">
+<a href="https://github.com/QEbellavita/QEbellavita/blob/main/assets/media/quantara-film.mp4"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/media/quantara-film-preview.gif" alt="Opening of the Quantara film — a sculpted heart on a teal wall as an EKG trace draws itself across and the wordmark resolves" width="62%"></a>
 
-<br><br>
-
-<a href="https://github.com/QEbellavita/QEbellavita/blob/main/assets/media/quantara-film.mp4"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/media/quantara-film-preview.gif" alt="Opening of the Quantara film — a sculpted heart on a teal wall as an EKG trace draws itself across and the wordmark resolves" width="78%"></a>
-
-<br>
-
-<a href="https://github.com/QEbellavita/QEbellavita/blob/main/assets/media/quantara-film.mp4"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/media/quantara-film-poster.jpg" alt="Closing frame of the Quantara film — a claymation brain wired into a radial mesh of threads and gears, with the app running the same brain on a phone beside it" width="78%"></a>
-
-<sub>▶ &nbsp;heart, to EKG, to brain, to the app running it — <a href="https://github.com/QEbellavita/QEbellavita/blob/main/assets/media/quantara-film.mp4">play the full 25s</a></sub>
-
-<br><br>
-
-<img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/media/heart-neon.jpeg" alt="Quantara mark — neon anatomical heart on textured blue with an EKG trace running behind it" width="42%">
+<sub><a href="https://github.com/QEbellavita/QEbellavita/blob/main/assets/media/quantara-film.mp4">▶ Quantara — heart, to EKG, to brain, to the app running it</a></sub>
 
 </div>
 
 <div align="center"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/divider.svg?v=2" alt="" width="100%"></div>
 
 ## Public work
-
-<div align="center">
-
-<img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/pipeline.svg?v=2" alt="Pipeline diagram. Face ROI video feeds POS, CHROM and GREEN/ICA extraction; these feed an SNR and cross-method agreement stage, which feeds a confidence gate. The gate outputs either a heart rate or an abstention. Separately, 1000 Hz ECG feeds R-peak detection, which with POS output feeds scoring against ground truth." width="100%">
-
-</div>
 
 <div align="center">
   <a href="https://github.com/QEbellavita/eeg-affect-honest-negatives"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/repo-card-eeg.svg?v=2" alt="eeg-affect-honest-negatives — pre-registered spikes finding EEG affect sits at the chance ceiling, including at N=123. Python, MIT, 3 datasets." width="47%"></a>
@@ -159,6 +34,8 @@ real body, so the imagery is a real body.
   <a href="https://github.com/QEbellavita/hf-papers-mcp"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/repo-card-hfpapers.svg?v=2" alt="hf-papers-mcp — MCP server for Hugging Face Papers. Python, MIT, 6 tools and 11 tests." width="47%"></a>
   <a href="https://github.com/QEbellavita/obsidian-vault-mcp"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/repo-card-obsidian.svg?v=2" alt="obsidian-vault-mcp — Obsidian MCP that survives iCloud eviction. JavaScript, MIT, 5 tools and 15 tests." width="47%"></a>
 </div>
+
+### Research
 
 **[rppg10-eval-harness](https://github.com/QEbellavita/rppg10-eval-harness)** — camera-based
 HR extraction over Dataset_rPPG-10, scored against synchronized 1000 Hz ECG. The README
@@ -187,6 +64,12 @@ model has never seen. It doesn't, and the ceiling holds at N=123. The reason pub
 look better: they decode *which clip you watched*, which is a different task. The harness
 reproduces that result first, to prove a null isn't just a broken pipeline.
 
+<div align="center">
+
+<img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/pipeline.svg?v=2" alt="Pipeline diagram. Face ROI video feeds POS, CHROM and GREEN/ICA extraction; these feed an SNR and cross-method agreement stage, which feeds a confidence gate. The gate outputs either a heart rate or an abstention. Separately, 1000 Hz ECG feeds R-peak detection, which with POS output feeds scoring against ground truth." width="100%">
+
+</div>
+
 ### Tools
 
 **[system-brain-mcp](https://github.com/QEbellavita/system-brain-mcp)** — eight read-only
@@ -210,8 +93,95 @@ papers instead of training data.
 went wrong; one of them is for catching an "implemented" engine that turns out to be
 `Math.random()` behind a confident interface.
 
+<div align="center"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/divider.svg?v=2" alt="" width="100%"></div>
+
+## What I'm building
+
+**Quantara** — emotional intelligence infrastructure. Biometric signals in, a read on how
+you actually feel out. Cross-modal fusion running live in production across cardiac,
+camera-derived HR, ambient context and music signal, blended against a per-user arousal
+baseline rather than a population mean. A six-phase engine — ingest → detect → predict →
+feedback → report → evolve — with the prediction layer wired to real outcome feedback
+rather than to its own guesses. Designed to **abstain under low confidence**, because a
+confident wrong number is worse than no number and on this signal the wrong number is easy
+to produce. Ships on iOS, watchOS and the web.
+
+**Scale.** ~450 REST endpoints over a 234-table schema, and 1,127 backend test suites
+across ~8,300 cases. Six services in production on Railway, with Socket.io real-time across
+21 namespaces. The watchOS companion runs CoreML inference on-device against compiled
+`.mlmodelc` weights, falling back to cloud when the local model declines.
+
+**The ML and AI layers.** ONNX inference in-process under a bounded-concurrency loader; a
+weighted ensemble where roughly nine models actually vote, behind a staged shadow tier
+carrying zero weight until promoted. 28-label text emotion from a quantized RoBERTa
+GoEmotions model running in Node with a hand-written byte-level BPE tokenizer, because the
+native `tokenizers` addon isn't available in the container. On top sits a Groq-backed LLM
+gateway with per-provider circuit breakers and per-user token budgets — and every
+user-facing message passes a **hard honesty gate** that extracts numeric tokens from the
+model's output and rejects any figure not derivable from the underlying signal. A gate
+failure falls back to a deterministic template; the same prompt is never shopped to a
+second model hoping for a passing answer. Crisis detection sits below all of it and emits a
+hardcoded message with real resources, deliberately not LLM-generated.
+
+The platform also exposes itself as an **MCP server** — 72 tools across 18 domains,
+fail-closed so it won't mount at all if the secret is missing. One of those tools is a
+fabrication audit that scans the codebase for its own placeholder cores.
+
+**Three things I built because the alternative was lying to a user:**
+
+- **A promotion gate that refuses to promote.** Forecast engines cannot self-promote. The
+  endpoint returns a fail-closed, decision-only verdict needing ≥300 *paired* targets and a
+  ≥5% composite-MAE win — and no automatic flip mechanism exists. Promotion is deliberate
+  manual work, by design.
+- **A feedback loop fail-closed to an allowlist**, so a model can't train on its own
+  output. An earlier weak-labeller prompted an LLM with the model's own prediction and
+  recorded the echo as ground truth. That's pseudo-label poisoning; it was killed at source.
+- **Process-level ONNX crash isolation.** A native runtime abort is uncatchable in JS, and
+  worker threads don't help — a thread abort kills the process. So scoped inference runs in
+  a forked sidecar where the abort becomes an ordinary rejection and the engine falls back
+  to its heuristic, behind a sticky per-model circuit breaker.
+
+Plus a written inventory of the platform's own inert code: ~15 fully-built capabilities
+gated off, each with its effect-when-off and a safe-to-flip verdict. Knowing what *isn't*
+switched on is a feature.
+
+**belcrm** — a white-label CRM covering ticketing, case management, CSAT/CES and delivery
+ops. The parts that aren't standard CRM: **SLA-breach risk is a trained model, not a rule**
+— a logistic regression fit in-process from each tenant's own resolved tickets on six
+leakage-free creation-time features, which only serves if it clears AUC ≥ 0.68 and beats
+the majority-class baseline on a held-out split, and otherwise stays in shadow mode while
+the heuristic answers. An **autonomous ticket agent inside a risk-tiered sandbox** where
+every tool is *auto*, *needs-human-approval* or *refuse-always*, and every action writes its
+audit row **before** it executes. And **tenant isolation proven in CI, not asserted in a
+doc** — an 811-line suite boots the real router under real auth and checks one tenant
+cannot reach another's rows.
+
 Most of my work is in private repos — Quantara, belcrm, and client systems. What's public
 is the research I can share without redistributing gated corpora or anyone's data.
+
+<div align="center"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/divider.svg?v=2" alt="" width="100%"></div>
+
+## Quantara — in motion
+
+The visual identity the platform ships under — anatomically-grounded organs rendered in
+claymation warmth, wired with EKG neon. Same premise as the engineering: the signal is a
+real body, so the imagery is a real body.
+
+<div align="center">
+
+<img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/media/landing-hero-art.jpg" alt="Quantara landing hero art — an anatomical brain and heart joined by glowing neural filaments over an EKG trace, on a deep violet field" width="100%">
+
+<br><br>
+
+<a href="https://github.com/QEbellavita/QEbellavita/blob/main/assets/media/quantara-film.mp4"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/media/quantara-film-poster.jpg" alt="Closing frame of the Quantara film — a claymation brain wired into a radial mesh of threads and gears, with the app running the same brain on a phone beside it" width="78%"></a>
+
+<sub>▶ &nbsp;<a href="https://github.com/QEbellavita/QEbellavita/blob/main/assets/media/quantara-film.mp4">play the full 25s</a></sub>
+
+<br><br>
+
+<img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/media/heart-neon.jpeg" alt="Quantara mark — neon anatomical heart on textured blue with an EKG trace running behind it" width="42%">
+
+</div>
 
 <div align="center"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/divider.svg?v=2" alt="" width="100%"></div>
 
@@ -232,4 +202,3 @@ is the research I can share without redistributing gated corpora or anyone's dat
 </div>
 
 <div align="center"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/divider.svg?v=2" alt="" width="100%"></div>
-
