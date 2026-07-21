@@ -57,6 +57,19 @@ stdio and authenticated Streamable HTTP, fail-closed so it won't mount at all if
 is missing. One of those tools is a fabrication audit that scans the codebase for its own
 placeholder cores.
 
+**Signal research** — I work across EEG, GSR, audio and text affect on the standard corpora
+(DEAP, WESAD, DREAMER, AMIGOS, FACED), and I publish the results that didn't work as
+plainly as the ones that did.
+
+Pre-registered spikes found that subject-independent EEG affect sits at the **chance
+ceiling** once the splits are honest — including at N=123. Several promising-looking
+results turned out to be leakage. That's a repo, not a footnote: knowing which signals
+*don't* carry the information is what makes the ones that do worth trusting.
+
+The camera work says something similar in a different register — rPPG can be trusted less
+often than the field's headline numbers suggest, and considerably less often on darker
+skin.
+
 **Three things I built because the alternative was lying to a user:**
 
 - **A promotion gate that refuses to promote.** Forecast engines cannot self-promote. The
@@ -97,18 +110,7 @@ CSAT/CES, inventory and delivery ops — but the parts that aren't standard CRM:
   libSQL/Turso drop-in for the node-sqlite3 API runs identical code against edge-replicated
   remote, local file, and in-memory test databases.
 
-**Signal research** — I work across EEG, GSR, audio and text affect on the standard corpora
-(DEAP, WESAD, DREAMER, AMIGOS, FACED), and I publish the results that didn't work as
-plainly as the ones that did.
 
-Pre-registered spikes found that subject-independent EEG affect sits at the **chance
-ceiling** once the splits are honest — including at N=123. Several promising-looking
-results turned out to be leakage. That's a repo, not a footnote: knowing which signals
-*don't* carry the information is what makes the ones that do worth trusting.
-
-The camera work says something similar in a different register — rPPG can be trusted less
-often than the field's headline numbers suggest, and considerably less often on darker
-skin.
 
 <div align="center"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/divider.svg?v=2" alt="" width="100%"></div>
 
