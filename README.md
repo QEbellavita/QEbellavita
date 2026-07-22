@@ -179,10 +179,6 @@ real body, so the imagery is a real body.
 
 <sub>▶ &nbsp;<a href="https://github.com/QEbellavita/QEbellavita/blob/main/assets/media/quantara-film.mp4">play the full 25s</a></sub>
 
-<br><br>
-
-<img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/media/heart-neon.jpeg" alt="Quantara mark — neon anatomical heart on textured blue with an EKG trace running behind it" width="42%">
-
 </div>
 
 
