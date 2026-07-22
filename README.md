@@ -185,7 +185,7 @@ real body, so the imagery is a real body.
 
 </div>
 
-<div align="center"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/divider.svg?v=2" alt="" width="100%"></div>
+
 
 ## Stack
 
