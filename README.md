@@ -32,7 +32,7 @@ and a pre-registered result that came back at the chance ceiling and stayed ther
   <a href="https://github.com/QEbellavita/rppg10-eval-harness"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/repo-card-harness.svg?v=2" alt="rppg10-eval-harness — camera heart-rate extraction scored against synchronized ECG. Python, Apache-2.0, 14 test modules." width="47%"></a>
   <a href="https://github.com/QEbellavita/rppg-skin-tone-equity"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/repo-card-equity.svg?v=2" alt="rppg-skin-tone-equity — Fitzpatrick-stratified error for cross-dataset deep rPPG. Python, MIT." width="47%"></a>
   <a href="https://github.com/QEbellavita/hf-papers-mcp"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/repo-card-hfpapers.svg?v=2" alt="hf-papers-mcp — MCP server for Hugging Face Papers. Python, MIT, 6 tools and 11 tests." width="47%"></a>
-  <a href="https://github.com/QEbellavita/obsidian-vault-mcp"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/repo-card-obsidian.svg?v=2" alt="obsidian-vault-mcp — Obsidian MCP that survives iCloud eviction. JavaScript, MIT, 5 tools and 15 tests." width="47%"></a>
+  <a href="https://github.com/QEbellavita/obsidian-icloud-mcp"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/repo-card-obsidian.svg?v=2" alt="obsidian-icloud-mcp — Obsidian MCP that survives iCloud eviction. JavaScript, MIT, 5 tools and 15 tests." width="47%"></a>
 </div>
 
 ### Research
@@ -79,7 +79,7 @@ closes. The deploy tool doesn't just read the config file — it cross-checks th
 target against every platform config in the repo and reports the strays, because a leftover
 project on another platform is the usual cause of "production keeps reverting".
 
-**[obsidian-vault-mcp](https://github.com/QEbellavita/obsidian-vault-mcp)** — an MCP server
+**[obsidian-icloud-mcp](https://github.com/QEbellavita/obsidian-icloud-mcp)** — an MCP server
 for Obsidian vaults that survives iCloud eviction. The naive version hangs forever on
 dataless files; `stat`'s block count is the only reliable signal that a note is really
 there.
