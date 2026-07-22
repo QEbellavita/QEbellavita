@@ -9,9 +9,7 @@
 </div>
 
 I build emotional-intelligence infrastructure on real biometric signal — cardiac, camera,
-context — and I publish the results that didn't work as plainly as the ones that did. A
-lot of what follows is the second kind: gates that refuse to promote, models that abstain,
-and a pre-registered result that came back at the chance ceiling and stayed there.
+context.
 
 <div align="center">
 
