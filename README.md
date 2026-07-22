@@ -27,7 +27,7 @@ and a pre-registered result that came back at the chance ceiling and stayed ther
 
 <div align="center">
   <a href="https://github.com/QEbellavita/eeg-affect-honest-negatives"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/repo-card-eeg.svg?v=2" alt="eeg-affect-honest-negatives — pre-registered spikes finding EEG affect sits at the chance ceiling, including at N=123. Python, MIT, 3 datasets." width="47%"></a>
-  <a href="https://github.com/QEbellavita/system-brain-mcp"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/repo-card-brain.svg?v=2" alt="system-brain-mcp — read-only MCP tools for where code deploys, what is fabricated, whether the feedback loop closes. JavaScript, MIT, 8 tools and 51 tests." width="47%"></a>
+  <a href="https://github.com/QEbellavita/system-brain-mcp"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/repo-card-brain.svg?v=2" alt="system-brain-mcp — read-only MCP tools for where code deploys, what is fabricated, whether the feedback loop closes, what to do next. JavaScript, MIT, 11 tools and 72 tests." width="47%"></a>
   <a href="https://github.com/QEbellavita/claude-honest-engineering-skills"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/repo-card-skills.svg?v=2" alt="claude-honest-engineering-skills — nine skills that make a coding agent check its work. Markdown, MIT." width="47%"></a>
   <a href="https://github.com/QEbellavita/rppg10-eval-harness"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/repo-card-harness.svg?v=2" alt="rppg10-eval-harness — camera heart-rate extraction scored against synchronized ECG. Python, Apache-2.0, 14 test modules." width="47%"></a>
   <a href="https://github.com/QEbellavita/rppg-skin-tone-equity"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/repo-card-equity.svg?v=2" alt="rppg-skin-tone-equity — Fitzpatrick-stratified error for cross-dataset deep rPPG. Python, MIT." width="47%"></a>
@@ -72,12 +72,14 @@ reproduces that result first, to prove a null isn't just a broken pipeline.
 
 ### Tools
 
-**[system-brain-mcp](https://github.com/QEbellavita/system-brain-mcp)** — eight read-only
+**[system-brain-mcp](https://github.com/QEbellavita/system-brain-mcp)** — eleven read-only
 MCP tools that let a coding agent interrogate the system it's working in: where this code
 *actually* deploys, what in it is fabricated, what's still open, whether the learning loop
-closes. The deploy tool doesn't just read the config file — it cross-checks the declared
-target against every platform config in the repo and reports the strays, because a leftover
-project on another platform is the usual cause of "production keeps reverting".
+closes — and what the evidence says to do next. `brain_recommend` is a deterministic rule
+table over the brain's own evidence: degraded sources produce fewer recommendations, never
+invented ones. The deploy tool cross-checks the declared target against every platform
+config in the repo and reports the strays, because a leftover project on another platform
+is the usual cause of "production keeps reverting".
 
 **[obsidian-icloud-mcp](https://github.com/QEbellavita/obsidian-icloud-mcp)** — an MCP server
 for Obsidian vaults that survives iCloud eviction. The naive version hangs forever on
