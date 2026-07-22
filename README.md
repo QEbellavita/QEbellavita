@@ -8,7 +8,7 @@
 
 </div>
 
-I build emotional-intelligence infrastructure on real biometric signal — cardiac, camera,
+I build emotional-intelligence infrastructure on real biometric signals — cardiac, camera,
 context.
 
 <div align="center">
