@@ -145,7 +145,7 @@ Plus a written inventory of the platform's own inert code: ~15 fully-built capab
 gated off, each with its effect-when-off and a safe-to-flip verdict. Knowing what *isn't*
 switched on is a feature.
 
-**belcrm** — a white-label CRM covering ticketing, case management, CSAT/CES and delivery
+**belcrm**(real name pending) — a white-label CRM covering ticketing, case management, CSAT/CES and delivery
 ops. The parts that aren't standard CRM: **SLA-breach risk is a trained model, not a rule**
 — a logistic regression fit in-process from each tenant's own resolved tickets on six
 leakage-free creation-time features, which only serves if it clears AUC ≥ 0.68 and beats
