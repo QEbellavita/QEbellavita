@@ -1,15 +1,16 @@
 <div align="center">
 
-### Applied AI, reproducible research, and reliable engineering
+<img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/header.svg?v=3" alt="QEbellavita, applied AI, reproducible research, and reliable engineering" width="100%">
+
+<br>
+
+<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=600&size=19&pause=1200&color=2563EB&center=true&vCenter=true&width=760&lines=Applied+AI+with+traceable+evidence;Reproducible+research+with+clear+limits;Reliable+engineering+from+model+to+product" alt="Applied AI, reproducible research, and reliable engineering">
 
 </div>
 
 I build production software and evaluate machine-learning systems with an emphasis on
 traceable evidence, explicit uncertainty, and safe failure. My public work focuses on
 reproducible research and practical developer tools.
-
-When evidence is weak, the system should decline to answer rather than turn uncertainty
-into a confident claim.
 
 <div align="center">
 
