@@ -94,6 +94,15 @@ published here.
   <img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/media/quantara-film-poster.jpg?v=restored" alt="Quantara film poster" width="31%">
 </div>
 
+<br>
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/media/brain-neural-vortex.jpg?v=1" alt="Pink brain within a colorful neural vortex" width="23%">
+  <img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/media/brain-neural-spark.jpg?v=1" alt="Illuminated pink brain with colorful neural connections" width="23%">
+  <img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/media/brain-neural-network.jpg?v=1" alt="Brain surrounded by neural cables and gears" width="23%">
+  <img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/media/quantara-biometric-heart-console.png?v=1" alt="Quantara biometric heart console artwork" width="23%">
+</div>
+
 <details>
 <summary>Repository social artwork</summary>
 
