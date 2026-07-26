@@ -17,11 +17,27 @@ reproducible research and practical developer tools.
 [Quantara](https://quantaraliving.com/) · [Public research](#research) ·
 [Open-source tools](#tools) · [Email](mailto:hello@quantaraliving.com)
 
+<br>
+
+<a href="https://github.com/QEbellavita/QEbellavita/blob/main/assets/media/quantara-film.mp4"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/media/quantara-film-preview.gif?v=restored" alt="Opening of the Quantara film, a sculpted heart on a teal wall as an EKG trace draws itself across and the wordmark resolves" width="58%"></a>
+
+<sub><a href="https://github.com/QEbellavita/QEbellavita/blob/main/assets/media/quantara-film.mp4">▶ Watch the Quantara film</a></sub>
+
 </div>
 
 <div align="center"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/divider.svg?v=2" alt="" width="100%"></div>
 
 ## Public work
+
+<div align="center">
+  <a href="https://github.com/QEbellavita/eeg-affect-honest-negatives"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/repo-card-eeg.svg?v=restored" alt="eeg-affect-honest-negatives" width="47%"></a>
+  <a href="https://github.com/QEbellavita/system-brain-mcp"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/repo-card-brain.svg?v=restored" alt="system-brain-mcp" width="47%"></a>
+  <a href="https://github.com/QEbellavita/rppg10-eval-harness"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/repo-card-harness.svg?v=restored" alt="rppg10-eval-harness" width="47%"></a>
+  <a href="https://github.com/QEbellavita/rppg-skin-tone-equity"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/repo-card-equity.svg?v=restored" alt="rppg-skin-tone-equity" width="47%"></a>
+  <a href="https://github.com/QEbellavita/hf-papers-mcp"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/repo-card-hfpapers.svg?v=restored" alt="hf-papers-mcp" width="47%"></a>
+  <a href="https://github.com/QEbellavita/obsidian-icloud-mcp"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/repo-card-obsidian.svg?v=restored" alt="obsidian-icloud-mcp" width="47%"></a>
+  <a href="https://github.com/QEbellavita/claude-honest-engineering-skills"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/repo-card-skills.svg?v=restored" alt="claude-honest-engineering-skills" width="47%"></a>
+</div>
 
 ### Research
 
@@ -29,9 +45,13 @@ reproducible research and practical developer tools.
 A reproducible evaluation harness for camera-based physiological-signal research, with
 ground-truth scoring, documented limitations, and data-rights boundaries.
 
+<div align="center"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/abstention-chart.svg?v=restored" alt="Camera heart-rate evaluation chart" width="100%"></div>
+
 **[rppg-skin-tone-equity](https://github.com/QEbellavita/rppg-skin-tone-equity)**  
 An aggregate fairness evaluation for camera-based physiological sensing, with limitations
 reported alongside the result and no gated corpus redistributed.
+
+<div align="center"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/equity-chart.svg?v=restored" alt="Camera heart-rate equity evaluation chart" width="100%"></div>
 
 **[eeg-affect-honest-negatives](https://github.com/QEbellavita/eeg-affect-honest-negatives)**  
 Pre-registered EEG experiments that publish negative results when held-out evidence does
@@ -63,6 +83,31 @@ I am building Quantara, an applied-AI product spanning mobile experiences, machi
 learning, backend services, and analytics. Product architecture, operating thresholds,
 customer workflows, model-selection decisions, and private research direction are not
 published here.
+
+<div align="center"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/pipeline.svg?v=restored" alt="Quantara system pipeline" width="100%"></div>
+
+## Media gallery
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/media/heart-neon.jpeg?v=restored" alt="Neon heart artwork" width="31%">
+  <img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/media/landing-hero-art.jpg?v=restored" alt="Quantara landing artwork" width="31%">
+  <img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/media/quantara-film-poster.jpg?v=restored" alt="Quantara film poster" width="31%">
+</div>
+
+<details>
+<summary>Repository social artwork</summary>
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/social/claude-honest-engineering-skills.png?v=restored" alt="Claude honest engineering skills social card" width="47%">
+  <img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/social/eeg-affect-honest-negatives.png?v=restored" alt="EEG affect honest negatives social card" width="47%">
+  <img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/social/hf-papers-mcp.png?v=restored" alt="HF Papers MCP social card" width="47%">
+  <img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/social/obsidian-icloud-mcp.png?v=restored" alt="Obsidian iCloud MCP social card" width="47%">
+  <img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/social/rppg-skin-tone-equity.png?v=restored" alt="rPPG skin-tone equity social card" width="47%">
+  <img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/social/rppg10-eval-harness.png?v=restored" alt="rPPG-10 evaluation harness social card" width="47%">
+  <img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/social/system-brain-mcp.png?v=restored" alt="System Brain MCP social card" width="47%">
+</div>
+
+</details>
 
 ## Engineering principles
 
