@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 470 152" width="470" height="152" role="img" aria-label="eeg-affect-honest-negatives — Pre-registered spikes finding EEG affect sits at the chance ceiling — including at N=123.">
+  <rect x="0.75" y="0.75" width="468" height="150" rx="12" fill="#0D1117" stroke="#1F2937" stroke-width="1.5"/>
+  <rect x="0.75" y="0.75" width="4" height="150" rx="2" fill="#F43F5E"/>
+  <circle cx="30" cy="40.5" r="6.5" fill="none" stroke="#F43F5E" stroke-width="2"/>
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+    <text x="46" y="46" fill="#F8F9FA" font-size="16" font-weight="700">eeg-affect-honest-negatives</text>
+    <text x="46" y="72" fill="#9CA3AF" font-size="13">Pre-registered spikes finding EEG affect sits</text>
+    <text x="46" y="91" fill="#9CA3AF" font-size="13">at the chance ceiling — including at N=123.</text>
+    <circle cx="51" cy="122" r="3.5" fill="#3572A5"/>
+    <text x="62" y="126" fill="#9CA3AF" font-size="11">Python</text>
+    <circle cx="110" cy="122" r="3.5" fill="#6B7280"/>
+    <text x="121" y="126" fill="#9CA3AF" font-size="11">MIT</text>
+    <circle cx="152" cy="122" r="3.5" fill="#6B7280"/>
+    <text x="163" y="126" fill="#9CA3AF" font-size="11">3 datasets</text>
+  </g>
+</svg>
