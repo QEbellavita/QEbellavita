@@ -79,7 +79,7 @@ evidence-based release decisions.
 
 ## Current work
 
-I am building Quantara, an applied-AI product spanning mobile experiences, machine
+I am building Quantara, an applied-AI product/Mobile Phone app, machine
 learning, backend services, and analytics. Product architecture, operating thresholds,
 customer workflows, model-selection decisions, and private research direction are not
 published here.
