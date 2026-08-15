@@ -19,6 +19,13 @@ reproducible research and practical developer tools.
 
 <br>
 
+<strong>New here?</strong> Start with the
+<a href="https://github.com/QEbellavita/rppg10-eval-harness">rPPG-10 evaluation harness</a>,
+the <a href="https://github.com/QEbellavita/eeg-affect-honest-negatives">EEG honest-negative report</a>,
+or <a href="https://github.com/QEbellavita/system-brain-mcp">System Brain MCP</a>.
+
+<br>
+
 <a href="https://github.com/QEbellavita/QEbellavita/blob/main/assets/media/quantara-film.mp4"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/media/quantara-film-preview.gif?v=restored" alt="Opening of the Quantara film, a sculpted heart on a teal wall as an EKG trace draws itself across and the wordmark resolves" width="58%"></a>
 
 <sub><a href="https://github.com/QEbellavita/QEbellavita/blob/main/assets/media/quantara-film.mp4">▶ Watch the Quantara film</a></sub>
@@ -28,6 +35,10 @@ reproducible research and practical developer tools.
 <div align="center"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/divider.svg?v=2" alt="" width="100%"></div>
 
 ## Public work
+
+The projects below are the best entry points into my work. Research repositories publish
+methods, aggregate evidence, and limitations; they do not redistribute licensed datasets,
+subject-linked records, or private product logic.
 
 <div align="center">
   <a href="https://github.com/QEbellavita/eeg-affect-honest-negatives"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/repo-card-eeg.svg?v=restored" alt="eeg-affect-honest-negatives" width="47%"></a>
@@ -79,10 +90,9 @@ evidence-based release decisions.
 
 ## Current work
 
-I am building Quantara, an applied-AI product/Mobile Phone app, machine
-learning, backend services, and analytics. Product architecture, operating thresholds,
-customer workflows, model-selection decisions, and private research direction are not
-published here.
+I am building Quantara, an applied-AI product with a mobile app, machine-learning systems,
+backend services, and analytics. Product architecture, operating thresholds, customer
+workflows, model-selection decisions, and private research direction are not published here.
 
 <div align="center"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/pipeline.svg?v=restored" alt="Quantara system pipeline" width="100%"></div>
 
@@ -141,6 +151,10 @@ published here.
 
 I am open to collaborations in physiological-signal validation, affective computing,
 reliable agent tooling, MCP systems, and evidence-led machine learning.
+
+If a repository is useful to you, starring it helps other researchers and engineers find
+the work. Issues that include a reproducible example, a clear question, or a useful
+comparison are especially welcome.
 
 **[quantaraliving.com](https://quantaraliving.com/)** ·
 **[hello@quantaraliving.com](mailto:hello@quantaraliving.com)**
