@@ -152,10 +152,6 @@ workflows, model-selection decisions, and private research direction are not pub
 I am open to collaborations in physiological-signal validation, affective computing,
 reliable agent tooling, MCP systems, and evidence-led machine learning.
 
-If a repository is useful to you, starring it helps other researchers and engineers find
-the work. Issues that include a reproducible example, a clear question, or a useful
-comparison are especially welcome.
-
 **[quantaraliving.com](https://quantaraliving.com/)** ·
 **[hello@quantaraliving.com](mailto:hello@quantaraliving.com)**
 
