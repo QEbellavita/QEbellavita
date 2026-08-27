@@ -142,17 +142,13 @@ workflows, model-selection decisions, and private research direction are not pub
   <p><strong>Languages</strong></p>
   <p><img src="https://skillicons.dev/icons?i=python,ts,js,swift&theme=dark" alt="Python, TypeScript, JavaScript, Swift"></p>
   <p><strong>ML and inference</strong></p>
-  <p><img src="https://skillicons.dev/icons?i=pytorch,tensorflow,sklearn,opencv&theme=dark" alt="PyTorch, TensorFlow, scikit-learn, OpenCV"></p>
-  <p><sub>Transformers · ONNX Runtime · Core ML · MLX · XGBoost · LightGBM · MediaPipe</sub></p>
+  <p><img src="https://skillicons.dev/icons?i=pytorch,tensorflow,sklearn,opencv&theme=dark" alt="PyTorch, TensorFlow, scikit-learn, OpenCV"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/stack/row-ml-extras.svg?v=1" alt="Transformers, ONNX Runtime, Core ML, MLX, XGBoost, LightGBM, MediaPipe" height="48"></p>
   <p><strong>Backend and data</strong></p>
-  <p><img src="https://skillicons.dev/icons?i=nodejs,express,fastapi,flask,postgres,sqlite,redis,supabase&theme=dark" alt="Node.js, Express, FastAPI, Flask, PostgreSQL, SQLite, Redis, Supabase"></p>
-  <p><sub>Socket.IO · Model Context Protocol servers</sub></p>
+  <p><img src="https://skillicons.dev/icons?i=nodejs,express,fastapi,flask,postgres,sqlite,redis,supabase&theme=dark" alt="Node.js, Express, FastAPI, Flask, PostgreSQL, SQLite, Redis, Supabase"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/stack/row-backend-extras.svg?v=1" alt="Socket.IO, Model Context Protocol" height="48"></p>
   <p><strong>Mobile and frontend</strong></p>
-  <p><img src="https://skillicons.dev/icons?i=react,threejs,tailwind,vite&theme=dark" alt="React, Three.js, Tailwind CSS, Vite"></p>
-  <p><sub>React Native · Expo · Skia · Reanimated</sub></p>
+  <p><img src="https://skillicons.dev/icons?i=react,threejs,tailwind,vite&theme=dark" alt="React, Three.js, Tailwind CSS, Vite"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/stack/row-mobile-extras.svg?v=1" alt="React Native, Expo, Skia, Reanimated" height="48"></p>
   <p><strong>Infrastructure and testing</strong></p>
-  <p><img src="https://skillicons.dev/icons?i=docker,githubactions,git,jest&theme=dark" alt="Docker, GitHub Actions, Git, Jest"></p>
-  <p><sub>pytest · Detox</sub></p>
+  <p><img src="https://skillicons.dev/icons?i=docker,githubactions,git,jest&theme=dark" alt="Docker, GitHub Actions, Git, Jest"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/stack/row-testing-extras.svg?v=1" alt="pytest, Detox" height="48"></p>
 </div>
 
 ## Work with me
