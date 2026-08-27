@@ -94,7 +94,7 @@ I am building Quantara, an applied-AI product with a mobile app, machine-learnin
 backend services, and analytics. Product architecture, operating thresholds, customer
 workflows, model-selection decisions, and private research direction are not published here.
 
-<div align="center"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/pipeline.svg?v=3" alt="Abstract evidence pipeline: signals are validated, checked against independent evidence, and either produce a measured result or abstain." width="100%"></div>
+<div align="center"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/pipeline.svg?v=4" alt="The rPPG-10 evaluation pipeline: face ROI video feeds POS, CHROM and GREEN or ICA extraction, which feed an SNR and cross-method agreement stage, then a confidence gate that returns either a heart rate or an abstention; separately 1000 Hz ECG feeds R-peak detection and scoring against ground truth." width="100%"></div>
 
 ## Media gallery
 
