@@ -139,12 +139,20 @@ workflows, model-selection decisions, and private research direction are not pub
 ## Stack
 
 <div align="center">
-  <p><strong>Languages and ML</strong></p>
-  <p><img src="https://skillicons.dev/icons?i=python,ts,js,swift,pytorch,tensorflow,sklearn&theme=dark" alt="Python, TypeScript, JavaScript, Swift, PyTorch, TensorFlow, scikit-learn"></p>
-  <p><strong>Backend, data, and product</strong></p>
-  <p><img src="https://skillicons.dev/icons?i=nodejs,express,fastapi,postgres,sqlite,supabase,react,threejs&theme=dark" alt="Node.js, Express, FastAPI, PostgreSQL, SQLite, Supabase, React, Three.js"></p>
-  <p><strong>Infrastructure</strong></p>
-  <p><img src="https://skillicons.dev/icons?i=docker,githubactions,git&theme=dark" alt="Docker, GitHub Actions, Git"></p>
+  <p><strong>Languages</strong></p>
+  <p><img src="https://skillicons.dev/icons?i=python,ts,js,swift&theme=dark" alt="Python, TypeScript, JavaScript, Swift"></p>
+  <p><strong>ML and inference</strong></p>
+  <p><img src="https://skillicons.dev/icons?i=pytorch,tensorflow,sklearn,opencv&theme=dark" alt="PyTorch, TensorFlow, scikit-learn, OpenCV"></p>
+  <p><sub>Transformers · ONNX Runtime · Core ML · MLX · XGBoost · LightGBM · MediaPipe</sub></p>
+  <p><strong>Backend and data</strong></p>
+  <p><img src="https://skillicons.dev/icons?i=nodejs,express,fastapi,flask,postgres,sqlite,redis,supabase&theme=dark" alt="Node.js, Express, FastAPI, Flask, PostgreSQL, SQLite, Redis, Supabase"></p>
+  <p><sub>Socket.IO · Model Context Protocol servers</sub></p>
+  <p><strong>Mobile and frontend</strong></p>
+  <p><img src="https://skillicons.dev/icons?i=react,threejs,tailwind,vite&theme=dark" alt="React, Three.js, Tailwind CSS, Vite"></p>
+  <p><sub>React Native · Expo · Skia · Reanimated</sub></p>
+  <p><strong>Infrastructure and testing</strong></p>
+  <p><img src="https://skillicons.dev/icons?i=docker,githubactions,git,jest&theme=dark" alt="Docker, GitHub Actions, Git, Jest"></p>
+  <p><sub>pytest · Detox</sub></p>
 </div>
 
 ## Work with me
