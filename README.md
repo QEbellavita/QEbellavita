@@ -1,10 +1,10 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/header-original-animated.svg?v=1" alt="neural workflows, closed-loop prediction, cross-modal fusion" width="100%">
+<img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/header-original-animated.svg?v=1" alt="QEbellavita — evidence-gated AI and reproducible research" width="100%">
 
 <br>
 
-<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=600&size=19&pause=1200&color=2563EB&center=true&vCenter=true&width=760&lines=Emotional+AI+on+real+biometric+signals;Cross-modal+fusion+%E2%80%94+cardiac%2C+camera%2C+context;Models+that+abstain+instead+of+guessing;Full-stack+architect+%E2%80%94+backend%2C+ML%2C+mobile;AI+%E2%80%A2+Research+%E2%80%A2+Engineering&v=5" alt="What I work on">
+<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=600&size=19&pause=1200&color=2563EB&center=true&vCenter=true&width=760&lines=Evidence-gated+AI+systems;Reproducible+ML+research;Models+that+abstain+instead+of+guessing;Full-stack+product+engineer+%E2%80%94+ML%2C+backend%2C+mobile;AI+%E2%80%A2+Research+%E2%80%A2+Engineering&v=6" alt="What I work on">
 
 </div>
 
@@ -41,13 +41,13 @@ methods, aggregate evidence, and limitations; they do not redistribute licensed 
 subject-linked records, or private product logic.
 
 <div align="center">
-  <a href="https://github.com/QEbellavita/eeg-affect-honest-negatives"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/repo-card-eeg.svg?v=restored" alt="eeg-affect-honest-negatives" width="47%"></a>
-  <a href="https://github.com/QEbellavita/system-brain-mcp"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/repo-card-brain.svg?v=restored" alt="system-brain-mcp" width="47%"></a>
   <a href="https://github.com/QEbellavita/rppg10-eval-harness"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/repo-card-harness.svg?v=restored" alt="rppg10-eval-harness" width="47%"></a>
   <a href="https://github.com/QEbellavita/rppg-skin-tone-equity"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/repo-card-equity.svg?v=restored" alt="rppg-skin-tone-equity" width="47%"></a>
+  <a href="https://github.com/QEbellavita/eeg-affect-honest-negatives"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/repo-card-eeg.svg?v=restored" alt="eeg-affect-honest-negatives" width="47%"></a>
+  <a href="https://github.com/QEbellavita/system-brain-mcp"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/repo-card-brain.svg?v=restored" alt="system-brain-mcp" width="47%"></a>
+  <a href="https://github.com/QEbellavita/claude-honest-engineering-skills"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/repo-card-skills.svg?v=restored" alt="claude-honest-engineering-skills" width="47%"></a>
   <a href="https://github.com/QEbellavita/hf-papers-mcp"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/repo-card-hfpapers.svg?v=restored" alt="hf-papers-mcp" width="47%"></a>
   <a href="https://github.com/QEbellavita/obsidian-icloud-mcp"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/repo-card-obsidian.svg?v=restored" alt="obsidian-icloud-mcp" width="47%"></a>
-  <a href="https://github.com/QEbellavita/claude-honest-engineering-skills"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/repo-card-skills.svg?v=restored" alt="claude-honest-engineering-skills" width="47%"></a>
 </div>
 
 ### Research
@@ -94,7 +94,7 @@ I am building Quantara, an applied-AI product with a mobile app, machine-learnin
 backend services, and analytics. Product architecture, operating thresholds, customer
 workflows, model-selection decisions, and private research direction are not published here.
 
-<div align="center"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/pipeline.svg?v=restored" alt="Quantara system pipeline" width="100%"></div>
+<div align="center"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/pipeline.svg?v=3" alt="Abstract evidence pipeline: signals are validated, checked against independent evidence, and either produce a measured result or abstain." width="100%"></div>
 
 ## Media gallery
 
@@ -144,7 +144,7 @@ workflows, model-selection decisions, and private research direction are not pub
   <p><strong>Backend, data, and product</strong></p>
   <p><img src="https://skillicons.dev/icons?i=nodejs,express,fastapi,postgres,sqlite,supabase,react,threejs&theme=dark" alt="Node.js, Express, FastAPI, PostgreSQL, SQLite, Supabase, React, Three.js"></p>
   <p><strong>Infrastructure</strong></p>
-  <p><img src="https://skillicons.dev/icons?i=railway,docker,githubactions,git&theme=dark" alt="Railway, Docker, GitHub Actions, Git"></p>
+  <p><img src="https://skillicons.dev/icons?i=docker,githubactions,git&theme=dark" alt="Docker, GitHub Actions, Git"></p>
 </div>
 
 ## Work with me
