@@ -8,7 +8,7 @@
 
 </div>
 
-I build production software and evaluate machine-learning systems with an emphasis on adaptive intelligence and recursive self-improvemment. I care about systems that make their reasoning auditable, communicate confidence honestly, and fallback safely when they encounter ambiguity or missing information. My public work focuses on
+I build production software and evaluate machine-learning systems with an emphasis on adaptive intelligence and recursive improvemment. I care about systems that make their reasoning auditable, communicate confidence honestly, and fallback safely when they encounter ambiguity or missing information. My public work focuses on
 reproducible research and practical developer tools. This September I'm working on training open-source models and exploring on-device LLM inference, including MLX, MTP drafters, speculative decoding, and optimising neural processing on Apple Silicon. After that back to app dev work.
 
 <div align="center">
