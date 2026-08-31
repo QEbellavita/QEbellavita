@@ -151,7 +151,7 @@ workflows, model-selection decisions, and private research direction are not pub
   <p><img src="https://skillicons.dev/icons?i=docker,githubactions,git,jest&theme=dark" alt="Docker, GitHub Actions, Git, Jest"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/stack/row-testing-extras.svg?v=1" alt="pytest, Detox" height="48"></p>
 </div>
 
-**[quantaraliving.com](https://quantaraliving.com/)** ·
-**[hello@quantaraliving.com](mailto:hello@quantaraliving.com)**
+<div align="center">**[quantaraliving.com](https://quantaraliving.com/)** ·
+<div align="center">**[hello@quantaraliving.com](mailto:hello@quantaraliving.com)**
 
 <div align="center"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/divider.svg?v=2" alt="" width="100%"></div>
