@@ -10,7 +10,7 @@
 
 I build production software and evaluate machine-learning systems with an emphasis on
 traceable evidence, explicit uncertainty, and safe failure. My public work focuses on
-reproducible research and practical developer tools. On-device LLM inference research: MLX, MTP drafters, speculative decoding. Apple Silicon inference
+reproducible research and practical developer tools. On-device LLM inference research: MLX, MTP drafters, speculative decoding & Apple Silicon inference
 
 <div align="center">
 
