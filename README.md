@@ -8,7 +8,7 @@
 
 </div>
 
-I build production software and evaluate machine-learning systems. I care about systems that make their reasoning auditable, communicate confidence honestly, and degrade safely when they encounter ambiguity or missing information.. My public work focuses on
+I build production software and evaluate machine-learning systems. I care about systems that make their reasoning auditable, communicate confidence honestly, and fallback safely when they encounter ambiguity or missing information.. My public work focuses on
 reproducible research and practical developer tools. This September I'm focused on training open-source models and researching on-device LLM inference, including MLX, MTP drafters, speculative decoding, and optimizing inference on Apple Silicon. After that back to app dev work.
 
 <div align="center">
