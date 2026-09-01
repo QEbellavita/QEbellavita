@@ -34,9 +34,7 @@ or <a href="https://github.com/QEbellavita/system-brain-mcp">System Brain MCP</a
 
 ## Public work
 
-The projects below are the best entry points into my work Research repositories publish
-methods, aggregate evidence, and limitations; they do not redistribute licensed datasets,
-subject-linked records, or private product logic. 
+The projects below are the best entry points into my public work. These research repositories document methods, aggregate evidence, and discuss limitations. They do not redistribute licensed datasets, subject-level records, or proprietary product logic. 
 
 <div align="center">
   <a href="https://github.com/QEbellavita/rppg10-eval-harness"><img src="https://raw.githubusercontent.com/QEbellavita/QEbellavita/main/assets/repo-card-harness.svg?v=restored" alt="rppg10-eval-harness" width="47%"></a>
