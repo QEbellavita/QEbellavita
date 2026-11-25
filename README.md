@@ -9,7 +9,7 @@
 </div>
 
 I build production software and evaluate machine-learning systems with an emphasis on adaptive intelligence and recursive improvement. I care about systems that make their reasoning auditable, communicate confidence honestly, and fallback safely when they encounter ambiguity or missing information. My public work focuses on
-reproducible research and practical developer tools. This September, I'm training open-source language models and exploring on-device LLM inference, including MLX, multi-token prediction (MTP) drafters, speculative decoding, and optimizing neural processing on Apple Silicon. After that, it's back to app development(Quantara, BELCRM, Training Hub).
+reproducible research and practical developer tools. Recently I've been training open-source language models and exploring on-device LLM inference on Apple Silicon, including MLX, multi-token prediction (MTP) drafters and speculative decoding. Alongside that, I build AI-powered apps, including Quantara, BELCRM and Training Hub.
 <div align="center">
 
 [Quantara](https://quantaraliving.com/) · [Public research](#research) ·
